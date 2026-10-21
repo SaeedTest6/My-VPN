@@ -143,7 +143,8 @@
       const domain = name ? `${name}-443.app.github.dev` : "YOUR-CODESPACE-NAME-443.app.github.dev";
       const configs = [
         { label: "Domain", host: domain, link: buildLink(domain, 443, domain) },
-        ...STATIC_IPS.map((ip) => ({ label: `IP ${ip}`, host: ip, link: buildLink(ip, 443, domain) }))
+        ...STATIC_IPS.map((ip) => ({ label: `IP ${ip}`, host: ip, link: buildLink(ip, 443, domain) })),
+        { label: "Ukraine Kyiv (VLESS REALITY XHTTP)", host: "130.0.233.100:8443", link: "vless://" + encodeURIComponent(uuidEl.value.trim()) + "@130.0.233.100:8443?encryption=none&security=reality&sni=ya.ru&fp=chrome&pbk=oJXngdG-SwLxHt2tJonmC-T_6PS4UEACLWj4sbfetno&sid=aabbccdd&type=xhttp&path=%2Fx#Ukraine-Kyiv" }
       ];
 
       if (serverIp) {
